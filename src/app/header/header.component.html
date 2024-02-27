@@ -1,0 +1,22 @@
+<!-- header component -->
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+      <!-- onclick for side nav -->
+      <button mat-icon-button (click)="onToggleSidenav()">
+        <!-- title -->
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  
+    <!-- language translate -->
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <button mat-button routerLink="displaypage" routerLinkActive="active">{{'demo.menu1'| translate}}</button>
+      <button mat-button routerLink="login" routerLinkActive="active">{{'demo.menu2' | translate}}</button>
+      <div>
+        <button style="margin-left: 630%;" (click)="switchLanguage('en')">english</button>
+        <button (click)="switchLanguage('es')">hindi</button>
+      </div>
+    </div>
+  
+    <app-display-page></app-display-page>
+  </mat-toolbar>
